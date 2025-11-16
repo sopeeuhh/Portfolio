@@ -8,6 +8,7 @@
 
     <body>
 
+
     <section class="main">
 <img src= "scenerybackground.jpeg" alt="banner">
 <img src="leaves.png" alt="leaves" class="leaves">
@@ -15,12 +16,26 @@
 <div class="sparkle"></div>
 
 
-<a href="home.html" class="intro-button">
+<a href="home.html" class="intro-button" id="enterButton">
     <img src="Scenery_background_for_portfolio.png" alt="enter">
 </a>
 
-
 </section>
+
+<div class="loading-screen">
+    <img src="loading.gif" alt="loading" class="loading-image">
+</div>
+
+<script>
+    document.getElementById('enterButton').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('.loading-screen').classList.add('active');
+
+    setTimeout(function() {
+        window.location.href='home.html';
+    }, 1000);
+});
+</script>
     </body>
 
 

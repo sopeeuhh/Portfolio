@@ -26,7 +26,7 @@ body {
 
 .intro-button {
     position: absolute;
-    top: 50%;
+    top: 45.2%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease;
@@ -47,4 +47,53 @@ body {
 }
 .intro-button:hover img {
     filter: brightness(1.2);
+}
+
+/*LEAVES*/
+.leaves {
+    position: absolute;
+    top: 25%;
+    left: 6%;
+    height: 100%;
+    width: 100%;
+    animation: sway 5s ease-in-out infinite;
+    pointer-events: none;
+    object-fit: cover;
+}
+
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-6deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/*SPARKLE*/
+.sparkle {
+
+position: absolute;
+top:0;
+left:0;
+width: 70%;
+height: 70%;
+background-image: url('sparkle.png');
+background-size: contain;
+background-repeat: no-repeat;
+animation: twinkle 5s ease-in-out infinite;
+pointer-events: none;
+z-index: 4;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
